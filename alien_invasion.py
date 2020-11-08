@@ -7,12 +7,13 @@ from button import Button
 from ship import Ship
 import game_functions as gf
 
+
 def run_game():
     # Loading game and creating a screen object
     pygame.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode((ai_settings.screen_width,
-                                     ai_settings.screen_height))
+                                      ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
     # Make the play button
@@ -39,5 +40,6 @@ def run_game():
             gf.update_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets)
             gf.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
         gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
+
 
 run_game()
