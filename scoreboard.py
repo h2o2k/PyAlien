@@ -2,6 +2,7 @@ import pygame.font
 from pygame.sprite import Group
 from ship import Ship
 
+
 class Scoreboard():
     def __init__(self, ai_settings, screen, stats):
         # Initialize scorekeeping attributes
@@ -24,7 +25,8 @@ class Scoreboard():
         # Turn score into a rendered imag
         rounded_score = int(round(self.stats.score, -1))
         score_str = "Score: " + "{:,}".format(rounded_score)
-        self.score_image = self.font.render(score_str, True, self.text_color, self.ai_settings.bg_color)
+        self.score_image = self.font.render(
+            score_str, True, self.text_color, self.ai_settings.bg_color)
 
         # Display the score in the top right
         self.score_rect = self.score_image.get_rect()
@@ -35,7 +37,8 @@ class Scoreboard():
         # Turn score into a rendered imag
         high_score = int(round(self.stats.high_score, -1))
         high_score_str = "High score: " + "{:,}".format(high_score)
-        self.high_score_image = self.font.render(high_score_str, True, self.text_color, self.ai_settings.bg_color)
+        self.high_score_image = self.font.render(
+            high_score_str, True, self.text_color, self.ai_settings.bg_color)
 
         # Display the score in the top right
         self.high_score_rect = self.high_score_image.get_rect()
@@ -43,7 +46,8 @@ class Scoreboard():
         self.high_score_rect.top = self.score_rect.top
 
     def prep_level(self):
-        self.level_image = self.font.render(str(self.stats.level), True, self.text_color, self.ai_settings.bg_color)
+        self.level_image = self.font.render(
+            str(self.stats.level), True, self.text_color, self.ai_settings.bg_color)
 
         # Position the level below the score.
         self.level_rect = self.level_image.get_rect()

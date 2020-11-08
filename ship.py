@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Ship(Sprite):
     def __init__(self, ai_settings, screen):
         # Loading a ship and setting its starting position
@@ -28,7 +29,7 @@ class Ship(Sprite):
         # Update the ships position based on the movement flag
         # Update the ship center value and not the rect
         if self.moving_right and self.rect.right < self.screen_rect.right:
-            self.center+= self.ai_settings.ship_speed_factor
+            self.center += self.ai_settings.ship_speed_factor
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
 

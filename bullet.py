@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bullet(Sprite):
     # Class to manage bullets fired from the ships
     def __init__(self, ai_settings, screen, ship):
