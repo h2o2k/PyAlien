@@ -1,5 +1,5 @@
 # PyAlien
-> Pygame project from Python Crash Course
+> Pygame project from Python Crash Course 1st Edition
 
 ## Requirements
 1. Pygame
@@ -18,5 +18,5 @@
 5. Create a new Pull Request
 
 ## References
-Sample project taken from Python Crash Course First Edition
+Sample project taken from Python Crash Course First Edition.
 
